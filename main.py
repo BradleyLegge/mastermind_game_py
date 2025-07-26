@@ -9,7 +9,7 @@ def validate_input():
             print("Invalid input!")
 
 def main():
-    mastermind_num = random.randint(1, 99)
+    mastermind_num = random.randint(1, 9999)
     print(mastermind_num)
     guess = validate_input()
     print("")
