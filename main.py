@@ -1,9 +1,17 @@
 import random
 
+def validate_input():
+    while True:
+        try:
+            guess = int(input("Guess the 4 digit number: "))
+            return guess
+        except ValueError:
+            print("Invalid input!")
+
 def main():
     mastermind_num = random.randint(1, 99)
     print(mastermind_num)
-    guess = int(input("Guess the 4 digit number: "))
+    guess = validate_input()
     print("")
 
     attempts = 1
@@ -33,7 +41,7 @@ def main():
         print(correct)
         print("")
 
-        guess = int(input("Enter your next choice of numbers: "))
+        guess = validate_input()
 
     print("You've become a Mastermind.")
     print(f"It took you only {attempts} tries")
